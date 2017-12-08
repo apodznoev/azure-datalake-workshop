@@ -7,6 +7,18 @@
     <groupId>de.avpod</groupId>
     <artifactId>azure-datalake-workshop</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 
     <repositories>
@@ -30,31 +42,36 @@
             </snapshots>
         </repository>
     </repositories>
+
     <dependencies>
         <dependency>
             <groupId>com.microsoft.azure</groupId>
             <artifactId>azure-client-authentication</artifactId>
-            <version>1.0.0-20160513.000802-24</version>
+            <version>LATEST</version>
         </dependency>
+
         <dependency>
             <groupId>com.microsoft.azure</groupId>
-            <artifactId>azure-client-runtime</artifactId>
-            <version>1.0.0-20160513.000812-28</version>
+            <artifactId>azure-management</artifactId>
+            <version>LATEST</version>
         </dependency>
-        <dependency>
-            <groupId>com.microsoft.rest</groupId>
-            <artifactId>client-runtime</artifactId>
-            <version>1.0.0-20160513.000825-29</version>
-        </dependency>
+
         <dependency>
             <groupId>com.microsoft.azure</groupId>
-            <artifactId>azure-mgmt-datalake-store</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <artifactId>azure-storage</artifactId>
+            <version>6.1.0</version>
         </dependency>
+
         <dependency>
             <groupId>com.microsoft.azure</groupId>
-            <artifactId>azure-mgmt-datalake-analytics</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <artifactId>azure-data-lake-store-sdk</artifactId>
+            <version>2.1.5</version>
         </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-nop</artifactId>
+            <version>1.7.21</version>
+        </dependency>
+
     </dependencies>
 </project>
